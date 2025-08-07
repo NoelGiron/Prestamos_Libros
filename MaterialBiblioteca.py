@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 class MaterialBiblioteca(ABC):
-    def __init__(self, titulo, autor, codigo, estado):
+    def __init__(self, titulo, autor, codigo):
         self.titulo = titulo
         self.autor = autor
         self.codigo = codigo
@@ -15,6 +15,6 @@ class MaterialBiblioteca(ABC):
         pass
 
     def informacionGeneral(self):
-        pass
+        return f'Titulo: ${self.titulo} Autor: ${self.autor} Disponible: ${self.estado}'
 
 
