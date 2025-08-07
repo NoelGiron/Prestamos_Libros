@@ -31,12 +31,12 @@ hereda de MaterialBiblioteca este tipo de libro puede ser prestado por un máxim
 hereda de MaterialBiblioteca este tipo de libro puede ser prestado por un máximo de 3 días
 
 ### Atributos
-* tamaño: este atributo adicional indicaa el tamaño del archivo en MB
+* tamaño: este atributo adicional indica el tamaño del archivo en MB
 
 ## Menú
 Para hacer funcional el sistema, debe implementarse un menú interactivo en consola.
 
-* Registar nuevos materiales en la biblioteca, ya sean libros físicos o digitales 
+* Registrar nuevos materiales en la biblioteca, ya sean libros físicos o digitales 
 * Gestionar los materiales ya registrados, permitiendo prestar, devolver o consultar información de cada uno 
 
 El programa debe mantenerse en ejecución hasta que el usuario decida salir.
