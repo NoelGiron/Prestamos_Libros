@@ -12,4 +12,4 @@ class libroFisico(MaterialBiblioteca):
         pass
 
     def informacionGeneral(self):
-        pass
+        return f'Titulo: ${self.titulo} Autor: ${self.autor} Ejemplares: ${self.numeroEjemplar}'
