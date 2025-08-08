@@ -13,16 +13,17 @@ class MaterialBiblioteca(ABC):
         caracteres = string.ascii_letters + string.digits
         self.__codigo = ''.join(random.choice(caracteres) for _ in range(8))
 
-    def informacionGeneral(self):
-        return f'Titulo: ${self.titulo} Autor: ${self.autor} Disponible: ${self.estado}'
-
     @abstractmethod
     def prestarMaterial(self):
         pass
-
+    
+    @abstractmethod     
     def devolverMaterial(self):
         pass
-
+    
+    @abstractmethod     
+    def informacionGeneral(self):
+        pass
     
 
 
