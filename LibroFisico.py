@@ -10,3 +10,6 @@ class libroFisico(MaterialBiblioteca):
 
     def devolverMaterial(self):
         pass
+
+    def informacionGeneral(self):
+        pass
