@@ -1,5 +1,4 @@
-import MaterialBiblioteca
-
+from MaterialBiblioteca import MaterialBiblioteca
 class libroDigital(MaterialBiblioteca):
     def __init__(self, titulo, autor, codigo, peso):
         super().__init__(titulo, autor, codigo)

@@ -1,4 +1,4 @@
-import MaterialBiblioteca
+from MaterialBiblioteca import MaterialBiblioteca
 
 class LibroFisico(MaterialBiblioteca):
     def __init__(self, titulo, autor, codigo, numeroEjemplar):
