@@ -11,4 +11,4 @@ class libroDigital(MaterialBiblioteca):
         pass
 
     def informacionGeneral(self):
-        return f'Titulo: ${self.titulo} Autor: ${self.autor} Ejemplares: ${self.peso}'
+        return f'Titulo: {self.titulo} Autor: {self.autor} Peso: {self.peso}MB'
