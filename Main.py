@@ -1,4 +1,4 @@
-#from LibroDigital import libroDigital
+from LibroDigital import libroDigital
 from libro_fisico import LibroFisico
 
 #array temporal hasta implementar una lista 
@@ -31,6 +31,8 @@ if __name__=="__main__":
             
             elif opcion == 2:
                 print("2) Ingrese un nuevo libro digital")
+                libro2 = libroDigital("cubmres", "Manuel", "f12few", 45);
+                print(libro2.informacionGeneral());
             
             elif opcion == 3:
                 pass
