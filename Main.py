@@ -12,7 +12,21 @@ def Menu():
     print("< 3) Salir---------------------------------->")
     print("<------------------------------------------->")
 
-def menuRegistro():
+def Gestion():
+    print("1) Prestar libro")
+    print("2) Devolver libro")
+    print("3) Consultar informacion")
+    print("4) Regresar")
+
+def consultaInformacion():
+    print("<-----------------Lista de libros fisícos--------------->")
+    listaFisica.imprimir();
+    print("<------------------------------------------------------->")
+    print("<-----------------Lista de libros digitales------------->")
+    listaDigital.imprimir();
+    print("<------------------------------------------------------->")
+
+def Registro():
     print("1) Registrar libro físico")
     print("2) Registrar libro digital")
     print("3) Regresar")
@@ -53,13 +67,10 @@ if __name__=="__main__":
         opcion = int(input("ingrese una de las opciones: "))
 
         if opcion == 1:
-            menuRegistro()
+            Registro()
 
         elif opcion == 2:
-            print("1) Prestar libro")
-            print("2) Devolver libro")
-            print("3) Consultar informacion")
-            print("4) Regresar")
+            Gestion()
             opcion = int(input("ingrese una de las opciones: "))
             
             if opcion == 1:
@@ -69,7 +80,7 @@ if __name__=="__main__":
                 print("Se a devuelto el libro")
             
             elif opcion == 3:
-                print("Esta es la informacion del libro")
+                consultaInformacion()
 
             elif opcion == 4:
                 pass
