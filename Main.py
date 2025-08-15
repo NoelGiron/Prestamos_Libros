@@ -1,8 +1,9 @@
+from Estructuras.ListaEnlazada import ListaEnlazada
 from LibroDigital import libroDigital
 from libro_fisico import LibroFisico
 
-#array temporal hasta implementar una lista 
-lista_libros = [];
+listaFisica = ListaEnlazada();
+listaDigital = ListaEnlazada();
 
 def Menu():
     print("<------------------Menu--------------------->")
