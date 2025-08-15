@@ -1,6 +1,6 @@
-from Estructuras.ListaEnlazada import ListaEnlazada
-from LibroDigital import libroDigital
-from libro_fisico import LibroFisico
+from ListaEnlazada import *
+from LibroDigital import *
+from libro_fisico import *
 
 listaFisica = ListaEnlazada();
 listaDigital = ListaEnlazada();
@@ -19,16 +19,32 @@ def menuRegistro():
     opcion = int(input("Ingrese una de las opciones: "))
     if opcion == 1:      
         print("1) Ingrese un nuevo libro fisico")
-        libro1 = LibroFisico("soledad", "Garcia", "1234m3l", 23);
-        print(libro1.informacionGeneral());
+        registroLibroFisico();
     elif opcion == 2:
         print("2) Ingrese un nuevo libro digital")
-        libro2 = libroDigital("cubmres", "Manuel", "f12few", 45);
-        print(libro2.informacionGeneral());           
+        registroLibroDigital();  
     elif opcion == 3:
         pass
     else:
         print("Opción no váldia, intente de nuevo")
+
+def registroLibroFisico():
+    titulo = input("Ingrese el titulo del libro: ");
+    autor = input("Ingrese el nombre del autor: ");
+    codigo = input("Ingrese el codigo del libro: ");
+    numero = int(input("Ingrese el numero de copias del libro: "));
+    nuevoLibroFisico = LibroFisico(titulo, autor, codigo, numero);
+    listaFisica.insertar(nuevoLibroFisico);
+    listaFisica.imprimir();
+
+def registroLibroDigital():
+    titulo = input("Ingrese el titulo del libro: ");
+    autor = input("Ingrese el nombre del autor: ");
+    codigo = input("Ingrese el codigo del libro: ");
+    numero = int(input("Ingrese el peso del libro: "));
+    nuevoLibroDigital = libroDigital(titulo, autor, codigo, numero);
+    listaDigital.insertar(nuevoLibroDigital);
+    listaDigital.imprimir();
 
 if __name__=="__main__":
     pregunta = True

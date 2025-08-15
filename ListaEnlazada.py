@@ -1,4 +1,4 @@
-from .NodoLE import NodoLE
+from NodoLE import NodoLE
 
 class ListaEnlazada:
     def __init__(self):

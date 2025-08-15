@@ -11,5 +11,5 @@ class LibroFisico(MaterialBiblioteca):
     def devolverMaterial(self):
         pass
 
-    def informacionGeneral(self):
+    def __str__(self):
         return f'Titulo: {self.titulo} Autor: {self.autor} Ejemplares: {self.numeroEjemplar}'

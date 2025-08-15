@@ -22,7 +22,7 @@ class MaterialBiblioteca(ABC):
         pass
     
     @abstractmethod     
-    def informacionGeneral(self):
+    def __str__(self):
         pass
     
 
