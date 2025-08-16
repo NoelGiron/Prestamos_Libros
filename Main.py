@@ -60,6 +60,19 @@ def registroLibroDigital():
     listaDigital.insertar(nuevoLibroDigital);
     listaDigital.imprimir();
 
+def prestarLibro():
+    print("<-----------------Lista de libros fisícos--------------->")
+    listaFisica.imprimir();
+    print("<------------------------------------------------------->")
+    libro = int(input("Seleccione el libro que quiere prestar: "))
+    libroPrestado = listaFisica.recorrer(libro)
+    ejemplarActual = libroPrestado.get()
+    if ejemplarActual != 0:
+        libroPrestado.set(ejemplarActual - 1)
+    else:
+        print("Este libro ya se puede prestar");
+    print(libroPrestado.numeroEjemplar);
+
 if __name__=="__main__":
     pregunta = True
     while pregunta:
@@ -74,7 +87,7 @@ if __name__=="__main__":
             opcion = int(input("ingrese una de las opciones: "))
             
             if opcion == 1:
-                print("Se a prestado un libro")
+                prestarLibro()
             
             elif opcion == 2:
                 print("Se a devuelto el libro")
