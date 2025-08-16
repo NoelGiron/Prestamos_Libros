@@ -66,12 +66,16 @@ def prestarLibro():
     print("<------------------------------------------------------->")
     libro = int(input("Seleccione el libro que quiere prestar: "))
     libroPrestado = listaFisica.recorrer(libro)
-    ejemplarActual = libroPrestado.get()
-    if ejemplarActual != 0:
-        libroPrestado.set(ejemplarActual - 1)
-    else:
-        print("Este libro ya se puede prestar");
-    print(libroPrestado.numeroEjemplar);
+    libroPrestado.prestarMaterial();
+
+def regresarLibro():
+    print("<-----------------Lista de libros fisícos--------------->")
+    listaFisica.imprimir();
+    print("<------------------------------------------------------->")
+    libro = int(input("Seleccione el libro que quiere devolver: "))
+    libroDevuelto = listaFisica.recorrer(libro)
+    libroDevuelto.devolverMaterial();
+
 
 if __name__=="__main__":
     pregunta = True
@@ -90,7 +94,7 @@ if __name__=="__main__":
                 prestarLibro()
             
             elif opcion == 2:
-                print("Se a devuelto el libro")
+                regresarLibro()
             
             elif opcion == 3:
                 consultaInformacion()
