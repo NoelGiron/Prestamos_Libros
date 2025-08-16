@@ -10,26 +10,26 @@ def Menu():
     print("< 1) Registrar nuevo Material--------------->")
     print("< 2) Gestionar los materiales registrados--->")
     print("< 3) Salir---------------------------------->")
-    print("<------------------------------------------->")
+    print("<-------------------------------------------> \n")
 
 def Gestion():
     print("1) Prestar libro")
     print("2) Devolver libro")
     print("3) Consultar informacion")
-    print("4) Regresar")
+    print("4) Regresar \n")
 
 def consultaInformacion():
     print("<-----------------Lista de libros fisícos--------------->")
     listaFisica.imprimir();
-    print("<------------------------------------------------------->")
+    print("<------------------------------------------------------->\n")
     print("<-----------------Lista de libros digitales------------->")
     listaDigital.imprimir();
-    print("<------------------------------------------------------->")
+    print("<------------------------------------------------------->\n")
 
 def Registro():
     print("1) Registrar libro físico")
     print("2) Registrar libro digital")
-    print("3) Regresar")
+    print("3) Regresar \n")
     opcion = int(input("Ingrese una de las opciones: "))
     if opcion == 1:      
         print("1) Ingrese un nuevo libro fisico")
@@ -40,25 +40,24 @@ def Registro():
     elif opcion == 3:
         pass
     else:
-        print("Opción no váldia, intente de nuevo")
+        print("Opción no váldia, intente de nuevo \n")
 
 def registroLibroFisico():
     titulo = input("Ingrese el titulo del libro: ");
     autor = input("Ingrese el nombre del autor: ");
-    codigo = input("Ingrese el codigo del libro: ");
     numero = int(input("Ingrese el numero de copias del libro: "));
-    nuevoLibroFisico = LibroFisico(titulo, autor, codigo, numero);
+    nuevoLibroFisico = LibroFisico(titulo, autor, numero);
     listaFisica.insertar(nuevoLibroFisico);
-    listaFisica.imprimir();
+    print("Se ha registrado el libro \n")
 
 def registroLibroDigital():
     titulo = input("Ingrese el titulo del libro: ");
     autor = input("Ingrese el nombre del autor: ");
-    codigo = input("Ingrese el codigo del libro: ");
     numero = int(input("Ingrese el peso del libro: "));
-    nuevoLibroDigital = libroDigital(titulo, autor, codigo, numero);
+    nuevoLibroDigital = libroDigital(titulo, autor, numero);
     listaDigital.insertar(nuevoLibroDigital);
-    listaDigital.imprimir();
+    print("Se ha registrado el libro \n")
+
 
 def prestarLibro():
     print("<-----------------Lista de libros fisícos--------------->")
