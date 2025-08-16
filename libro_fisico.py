@@ -12,10 +12,22 @@ class LibroFisico(MaterialBiblioteca):
         self.numeroEjemplar = numero
 
     def prestarMaterial(self):
-        pass
+        ejemplarOriginal = self.numeroEjemplar
+        ejemplarActual = ejemplarOriginal - 1
+        if ejemplarActual != -1:
+            print(f'Se a prestado el libro: {self.titulo}')
+            self.numeroEjemplar = ejemplarActual
+        else:
+            print("Este libro ya no se puede prestar")
 
     def devolverMaterial(self):
-        pass
+        ejemplarOriginal = self.numeroEjemplar
+        ejemplarActual = ejemplarOriginal + 1
+        if ejemplarActual != self.numeroEjemplar:
+            print(f'Se a regresado el libro: {self.titulo}')
+            self.numeroEjemplar = ejemplarActual
+        else:
+            print("Este libro ya no se puede devolver")
 
     def __str__(self):
         return f'Titulo: {self.titulo} Autor: {self.autor} Ejemplares: {self.numeroEjemplar}'
