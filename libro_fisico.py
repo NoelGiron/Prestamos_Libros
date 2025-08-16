@@ -5,6 +5,12 @@ class LibroFisico(MaterialBiblioteca):
         super().__init__(titulo, autor, codigo)
         self.numeroEjemplar = numeroEjemplar
 
+    def get(self):
+        return self.numeroEjemplar
+    
+    def set(self, numero):
+        self.numeroEjemplar = numero
+
     def prestarMaterial(self):
         pass
 
